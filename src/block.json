@@ -1,0 +1,46 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "feedland/feedviewer",
+	"version": "0.1.0",
+	"title": "FeedLand Category News",
+	"category": "widgets",
+	"icon": "rss",
+	"description": "Displays entries from FeedLand.",
+	"example": {},
+	"supports": {
+		"align": true,
+		"html": false
+	},
+	"textdomain": "feedland",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"attributes": {
+		"screenname": {
+			"type": "string",
+			"default": "davewiner"
+		},
+		"category": {
+			"type": "string",
+			"default": "all"
+		},
+		"itemsToShow": {
+			"type": "number",
+			"default": 5
+		},
+		"displayExcerpt": {
+			"type": "boolean",
+			"default": false
+		},
+		"displayDate": {
+			"type": "boolean",
+			"default": false
+		},
+		"excerptLength": {
+			"type": "number",
+			"default": 55
+		}
+	}
+}
