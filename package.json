@@ -1,6 +1,6 @@
 {
 	"name": "feedland",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A custom block to display your FeedLand feed on your site.",
 	"author": {
 		"name": "WordPress.com Special Projects Team",

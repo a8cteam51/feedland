@@ -4,7 +4,7 @@
  * Description:       Displays your FeedLand items.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           0.1.0
+ * Version:           0.1.1
  * Author:            WordPress.com Special Projects
  * Author URI:        https://wpspecialprojects.wordpress.com
  * License:           GPL-2.0-or-later
@@ -26,6 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
 function feedland_block_init() {
-	register_block_type( __DIR__ . '/build' );
+	register_block_type( __DIR__ . '/build/feedland-category' );
+	register_block_type( __DIR__ . '/build/feedland-art' );
 }
 add_action( 'init', 'feedland_block_init' );

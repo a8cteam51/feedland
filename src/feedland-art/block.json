@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "feedland/art",
+	"version": "0.1.0",
+	"title": "FeedLand Artcasting",
+	"category": "art",
+	"icon": "rss",
+	"description": "Displays entries from FeedLand.",
+	"example": {},
+	"supports": {
+		"align": true,
+		"html": false
+	},
+	"textdomain": "feedland",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php",
+	"attributes": {
+		"readingListUrl": {
+			"type": "string",
+			"default": "https://lists.feedcorps.org/artshow.opml"
+		},
+		"itemsToShow": {
+			"type": "number",
+			"default": 5
+		}
+	}
+}
