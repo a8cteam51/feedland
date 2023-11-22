@@ -4,7 +4,7 @@
  * Description:       Displays your FeedLand items.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           0.1.2
+ * Version:           0.1.3
  * Author:            WordPress.com Special Projects
  * Author URI:        https://wpspecialprojects.wordpress.com
  * License:           GPL-2.0-or-later
