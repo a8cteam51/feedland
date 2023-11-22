@@ -30,3 +30,15 @@ function feedland_block_init() {
 	register_block_type( __DIR__ . '/build/feedland-art' );
 }
 add_action( 'init', 'feedland_block_init' );
+
+/**
+ * Skip photon for the bluesky feed.
+ */
+function feedland_photon_exception( $val, $src ) {
+	if ( str_contains( $src, 'firesky.tv' ) ) {
+		return true;
+	}
+
+	return $val;
+}
+add_filter( 'jetpack_photon_skip_image', 'feedland_photon_exception', 10, 2 );
