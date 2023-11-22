@@ -4,7 +4,7 @@
  * Description:       Displays your FeedLand items.
  * Requires at least: 6.1
  * Requires PHP:      7.0
- * Version:           0.1.1
+ * Version:           0.1.2
  * Author:            WordPress.com Special Projects
  * Author URI:        https://wpspecialprojects.wordpress.com
  * License:           GPL-2.0-or-later
@@ -33,6 +33,11 @@ add_action( 'init', 'feedland_block_init' );
 
 /**
  * Skip photon for the bluesky feed.
+ *
+ * @param bool   $val If we should skip.
+ * @param string $src The image source.
+ *
+ * @return bool
  */
 function feedland_photon_exception( $val, $src ) {
 	if ( str_contains( $src, 'firesky.tv' ) ) {
