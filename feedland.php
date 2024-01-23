@@ -28,6 +28,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 function feedland_block_init() {
 	register_block_type( __DIR__ . '/build/feedland-category' );
 	register_block_type( __DIR__ . '/build/feedland-art' );
+	register_block_type( __DIR__ . '/build/feedland-feed-item-date' );
+	register_block_type( __DIR__ . '/build/feedland-feed-item-enclosure' );
+	register_block_type( __DIR__ . '/build/feedland-feed-item-title' );
+	register_block_type( __DIR__ . '/build/feedland-feed-template' );
+	register_block_type( __DIR__ . '/build/feedland-query' );
 }
 add_action( 'init', 'feedland_block_init' );
 

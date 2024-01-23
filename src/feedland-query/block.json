@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "feedland/query",
+	"version": "0.1.0",
+	"title": "Feedland Query",
+	"category": "widgets",
+	"icon": "rss",
+	"description": "An advanced block that allows displaying feed items based on different parameters and visual configurations.",
+	"attributes": {
+		"query": {
+			"type": "object",
+			"default": {
+				"perPage": 10,
+				"screenName": "dave",
+				"category": "all"
+			}
+		},
+		"tagName": {
+			"type": "string",
+			"default": "div"
+		},
+		"namespace": {
+			"type": "string"
+		}
+	},
+	"providesContext": {
+		"feedland/query": "query",
+		"displayLayout": "displayLayout"
+	},
+	"supports": {
+		"align": [ "wide", "full" ],
+		"html": false,
+		"layout": true
+	},
+	"textdomain": "feedland",
+	"editorScript": "file:./index.js",
+	"style": "file:./style-index.css"
+}

@@ -1,0 +1,50 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "feedland/feed-template",
+	"parent": [ "feedland/query" ],
+	"version": "0.1.0",
+	"title": "Feed Template",
+	"category": "widgets",
+	"icon": "layout",
+	"description": "Contains the block elements used to render a FeedLand feed, like the title, date, featured image, content or excerpt, and more.",
+	"supports": {
+		"reusable": false,
+		"html": false,
+		"align": [ "wide", "full" ],
+		"layout": true,
+		"color": {
+			"gradients": true,
+			"link": true,
+			"__experimentalDefaultControls": {
+				"background": true,
+				"text": true
+			}
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true,
+			"__experimentalFontFamily": true,
+			"__experimentalFontWeight": true,
+			"__experimentalFontStyle": true,
+			"__experimentalTextTransform": true,
+			"__experimentalTextDecoration": true,
+			"__experimentalLetterSpacing": true,
+			"__experimentalDefaultControls": {
+				"fontSize": true
+			}
+		},
+		"spacing": {
+			"blockGap": {
+				"__experimentalDefault": "1.25em"
+			},
+			"__experimentalDefaultControls": {
+				"blockGap": true
+			}
+		}
+	},
+	"usesContext": [ "feedland/query", "displayLayout" ],
+	"textdomain": "feedland",
+	"editorScript": "file:./index.js",
+	"render": "file:./render.php"
+}

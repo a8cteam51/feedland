@@ -1,0 +1,86 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "feedland/feed-item-enclosure",
+	"parent": [ "feedland/feed-query" ],
+	"version": "0.1.0",
+	"title": "Feed Item Enclosure",
+	"category": "widgets",
+	"icon": "image",
+	"description": "Displays the enclosure of a feed item.",
+	"attributes": {
+		"isLink": {
+			"type": "boolean",
+			"default": false
+		},
+		"aspectRatio": {
+			"type": "string"
+		},
+		"width": {
+			"type": "string"
+		},
+		"height": {
+			"type": "string"
+		},
+		"scale": {
+			"type": "string",
+			"default": "cover"
+		},
+		"rel": {
+			"type": "string",
+			"attribute": "rel",
+			"default": ""
+		},
+		"linkTarget": {
+			"type": "string",
+			"default": "_self"
+		},
+		"overlayColor": {
+			"type": "string"
+		},
+		"customOverlayColor": {
+			"type": "string"
+		},
+		"dimRatio": {
+			"type": "number",
+			"default": 0
+		},
+		"gradient": {
+			"type": "string"
+		},
+		"customGradient": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"align": [ "left", "right", "center", "wide", "full" ],
+		"color": {
+			"__experimentalDuotone": "img, .wp-block-post-featured-image__placeholder, .components-placeholder__illustration, .components-placeholder::before",
+			"text": false,
+			"background": false
+		},
+		"__experimentalBorder": {
+			"color": true,
+			"radius": true,
+			"width": true,
+			"__experimentalSelector": "img, .block-editor-media-placeholder, .wp-block-post-featured-image__overlay",
+			"__experimentalSkipSerialization": true,
+			"__experimentalDefaultControls": {
+				"color": true,
+				"radius": true,
+				"width": true
+			}
+		},
+		"html": false,
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
+	},
+	"usesContext": [ "feedland/feed-item" ],
+	"textdomain": "feedland",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"render": "file:./render.php"
+}
