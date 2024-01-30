@@ -58,6 +58,7 @@ const variations = [
 				'feedland/feed-template',
 				{},
 				[
+					[ 'feedland/feed-item-host' ],
 					[ 'feedland/feed-item-title' ],
 					[ 'feedland/feed-item-enclosure' ],
 					[ 'feedland/feed-item-date' ],

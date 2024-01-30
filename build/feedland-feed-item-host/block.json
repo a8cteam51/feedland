@@ -1,0 +1,70 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "feedland/feed-item-host",
+  "parent": [
+    "feedland/feed-query"
+  ],
+  "version": "0.1.0",
+  "title": "Feed Item Host",
+  "category": "widgets",
+  "icon": "cloud",
+  "description": "Displays the host of the feed item.",
+  "attributes": {
+    "textAlign": {
+      "type": "string"
+    },
+    "isLink": {
+      "type": "boolean",
+      "default": false
+    },
+    "rel": {
+      "type": "string",
+      "attribute": "rel",
+      "default": ""
+    },
+    "linkTarget": {
+      "type": "string",
+      "default": "_self"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "html": false,
+    "color": {
+      "gradients": true,
+      "link": true,
+      "__experimentalDefaultControls": {
+        "background": true,
+        "text": true,
+        "link": true
+      }
+    },
+    "spacing": {
+      "margin": true,
+      "padding": true
+    },
+    "typography": {
+      "fontSize": true,
+      "lineHeight": true,
+      "__experimentalFontFamily": true,
+      "__experimentalFontWeight": true,
+      "__experimentalFontStyle": true,
+      "__experimentalTextTransform": true,
+      "__experimentalTextDecoration": true,
+      "__experimentalLetterSpacing": true,
+      "__experimentalDefaultControls": {
+        "fontSize": true
+      }
+    }
+  },
+  "usesContext": [
+    "feedland/feed-item"
+  ],
+  "textdomain": "feedland",
+  "editorScript": "file:./index.js",
+  "render": "file:./render.php"
+}

@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * @var array    $attributes
+ * @var WP_Block $block
+ * @var string   $content
+ */
 $transient_key = sprintf( 'feedland_%1$s_%2$s', $attributes['screenname'], $attributes['category'] );
 
 if ( false === ( $response = get_transient( $transient_key ) ) ) {

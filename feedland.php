@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
  * Registers the block using the metadata loaded from the `block.json` file.
- * Behind the scenes, it registers also all assets so they can be enqueued
+ * Behind the scenes, it registers also all assets, so they can be enqueued
  * through the block editor in the corresponding context.
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
@@ -32,6 +32,7 @@ function feedland_block_init() {
 	register_block_type( __DIR__ . '/build/feedland-feed-item-enclosure' );
 	register_block_type( __DIR__ . '/build/feedland-feed-item-title' );
 	register_block_type( __DIR__ . '/build/feedland-feed-template' );
+	register_block_type( __DIR__ . '/build/feedland-feed-item-host' );
 	register_block_type( __DIR__ . '/build/feedland-query' );
 }
 add_action( 'init', 'feedland_block_init' );
@@ -39,12 +40,13 @@ add_action( 'init', 'feedland_block_init' );
 /**
  * Skip photon for the bluesky feed.
  *
- * @param bool   $val If we should skip.
+ * @param bool $val If we should skip.
  * @param string $src The image source.
  *
  * @return bool
  */
-function feedland_photon_exception( $val, $src ) {
+function feedland_photon_exception( bool $val, string $src ): bool
+{
 	if ( str_contains( $src, 'firesky.tv' ) ) {
 		return true;
 	}
