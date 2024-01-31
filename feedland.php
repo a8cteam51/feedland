@@ -3,8 +3,8 @@
  * Plugin Name:       FeedLand
  * Description:       Displays your FeedLand items.
  * Requires at least: 6.1
- * Requires PHP:      7.0
- * Version:           0.1.3
+ * Requires PHP:      7.4
+ * Version:           0.1.5
  * Author:            WordPress.com Special Projects
  * Author URI:        https://wpspecialprojects.wordpress.com
  * License:           GPL-2.0-or-later
@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
  *
  * @see https://developer.wordpress.org/reference/functions/register_block_type/
  */
-function feedland_block_init() {
+function feedland_block_init(): void {
 	register_block_type( __DIR__ . '/build/feedland-category' );
 	register_block_type( __DIR__ . '/build/feedland-art' );
 	register_block_type( __DIR__ . '/build/feedland-feed-item-date' );
@@ -45,8 +45,7 @@ add_action( 'init', 'feedland_block_init' );
  *
  * @return bool
  */
-function feedland_photon_exception( bool $val, string $src ): bool
-{
+function feedland_photon_exception( bool $val, string $src ): bool {
 	if ( str_contains( $src, 'firesky.tv' ) ) {
 		return true;
 	}
